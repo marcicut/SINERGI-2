@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:background="@color/colorPutih"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context=".SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="7000px"
+        android:layout_height="162px"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/logoipp_panjang" />
+
+        <TextView
+            android:id="@+id/lblLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginTop="50dp"
+            android:gravity="start"
+            android:text="SINERGI Login"
+            android:paddingTop="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/lblWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblLogin"
+        android:gravity="left"
+        android:text="Silahkan login terlebih dahulu untuk masuk ke portal SINERGI"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lbluserID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblWelcome"
+        android:gravity="left"
+        android:text="User ID / Alamat Email :"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/txtUserID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPutih"
+        android:layout_below="@id/lbluserID"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/lblPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtUserID"
+        android:gravity="left"
+        android:text="Password :"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPutih"
+        android:layout_below="@id/lblPassword"
+        android:textSize="16sp"
+        android:inputType="textPassword"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:background="@drawable/blue_button"
+        android:layout_below="@id/txtPassword"
+        android:layout_marginTop="30dp"
+        android:text="Login"
+        android:textSize="25sp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/lblLupaPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:gravity="left"
+        android:text="Saya Lupa Password"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/lblVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblLupaPassword"
+        android:gravity="left"
+        android:text="versi 1.0 :: SINERGI portal by PT Indoplat Perkasa Purnama"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textAlignment="center"/>
+</RelativeLayout>
