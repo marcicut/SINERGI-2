@@ -5,19 +5,19 @@
     android:id="@+id/activity_main"
     android:background="@color/colorPutih"
     android:layout_marginTop="10dp"
-    android:layout_centerHorizontal="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    tools:context=".SplashActivity">
+    tools:context=".LoginActivity">
 
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="7000px"
-        android:layout_height="162px"
-        android:layout_centerInParent="true"
+        android:layout_width="600px"
+        android:layout_height="139px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
         android:src="@mipmap/logoipp_panjang" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:paddingTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="25sp" />
+            android:textSize="24sp" />
 
     <TextView
         android:id="@+id/lblWelcome"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/lblLogin"
         android:gravity="left"
-        android:text="Silahkan login terlebih dahulu untuk masuk ke portal SINERGI"
+        android:text="Silahkan login terlebih dahulu untuk masuk"
         android:paddingTop="5dp"
         android:textColor="@color/black"
         android:textSize="14sp" />
@@ -53,7 +53,7 @@
         android:text="User ID / Alamat Email :"
         android:layout_marginTop="50dp"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"/>
 
     <EditText
@@ -75,7 +75,7 @@
         android:text="Password :"
         android:layout_marginTop="25dp"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"/>
 
     <EditText
@@ -98,7 +98,7 @@
         android:layout_below="@id/txtPassword"
         android:layout_marginTop="30dp"
         android:text="Login"
-        android:textSize="25sp"
+        android:textSize="16sp"
         android:textAlignment="center"/>
 
     <TextView
@@ -110,7 +110,7 @@
         android:text="Saya Lupa Password"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="normal"
         android:textAlignment="center"/>
 
@@ -119,10 +119,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblLupaPassword"
-        android:gravity="left"
-        android:text="versi 1.0 :: SINERGI portal by PT Indoplat Perkasa Purnama"
-        android:layout_marginTop="60dp"
+        android:gravity="center|bottom"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:textAlignment="center"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        />
 </RelativeLayout>

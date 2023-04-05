@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -29,16 +32,24 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT < 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
         setContentView(R.layout.activity_login);
 
         EditText txtuserid;
         EditText txtpassword;
         Button btnlogin;
+        TextView lblversion;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         txtuserid = (EditText) findViewById(R.id.txtUserID);
         txtpassword = (EditText) findViewById(R.id.txtPassword);
         btnlogin = (Button) findViewById(R.id.btnLogin);
+        lblversion = (TextView) findViewById(R.id.lblVersion);
+
+        lblversion.setText("Portal SINERGI :: versi "+BuildConfig.VERSION_NAME+"\nby PT Indoplat Perkasa Purnama");
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,8 +147,8 @@ public class LoginActivity extends AppCompatActivity {
                         protected Map<String, String> getParams() throws AuthFailureError {
                             Map<String, String> params = new HashMap<>();
                             //Adding parameters to request
-                            params.put("id", userid);
-                            params.put("pe", password);
+                            params.put("id", userid.toString());
+                            params.put("pe", password.toString());
                             //returning parameter
                             return params;
                         }

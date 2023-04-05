@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class SplashActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
@@ -14,7 +19,16 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT < 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+
         setContentView(R.layout.activity_splash);
+
+        TextView lblversion;
+        lblversion = (TextView) findViewById(R.id.lblVersion);
+        lblversion.setText("Portal SINERGI :: versi "+BuildConfig.VERSION_NAME+"\nby PT Indoplat Perkasa Purnama");
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -30,7 +44,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 //tambahkan data nama server yang digunakan sebagai acuannya
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("serverAddress", "localhost");
+                editor.putString("serverAddress", "192.168.0.228");
                 //editor.putString("userID", "");
                 editor.apply();
 
