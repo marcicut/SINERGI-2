@@ -1,13 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:background="@color/colorPutih"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <RelativeLayout
+        android:id="@+id/layoutHijau"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorHijau"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/layoutPertama"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/lblWelcomeUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/lblNamaUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_below="@id/lblWelcomeUser">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/lblDepartemenUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorMerahMaroon"
+                        android:textSize="14sp"
+                        android:layout_below="@id/lblNamaUser">
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_weight="2"
+                android:gravity="right">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:elevation="12dp"
+                    android:id="@+id/view2"
+                    app:cardCornerRadius="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9">
+                    <ImageView
+                        android:layout_height="80dp"
+                        android:layout_width="match_parent"
+                        android:id="@+id/imageView1"
+                        android:src="@mipmap/no_user"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true">
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutPertama">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/relSPPB1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSPPB"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:background="@color/colorPutih"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="5dp">
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relSPPB2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/relSPPB1"
+                    android:layout_marginLeft="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSPPB"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:background="@color/colorPutih"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="5dp">
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relSPPB3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/relSPPB2"
+                    android:layout_marginLeft="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSPPB"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:background="@color/colorPutih"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="5dp">
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relSPPB4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/relSPPB3"
+                    android:layout_marginLeft="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSPPB"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:background="@color/colorPutih"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="5dp">
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+    
+    <ScrollView
+        android:id="@+id/scrollHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHijau"
+        android:layout_above="@id/menu_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:src="@mipmap/pabrik_karawang" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/colorHijauMuda">
+
+                <TextView
+                    android:id="@+id/txtrunning"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingTop="5dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:layout_below="@id/slider"
+                    android:text="Selamat datang di portal SINERGI by PT Indoplat Perkasa Purnama. Portal ini dipergunakan untuk semua karyawan PT Indoplat Perkasa Purnama untuk mendukung pekerjaan dan koordinasi antar departemen"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblPurchasingMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/txtrunning"
+                android:text="Purchasing"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <!-- menu Purchasing mulai disini -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mnPurchasing"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="0.20"
+                    android:clickable="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPutih"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_above="@id/lblMenuPurchasing"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@mipmap/sppb">
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/lblMenuPurchasing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5dp"
+                            android:maxLines="1"
+                            android:text="Appr SPPB"
+                            android:textSize="12sp"
+                            android:textColor="#000000">
+                        </TextView>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!-- menu Purchasing selesai disini -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_navigation_menu" />
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:id="@+id/menu_layout">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
+</RelativeLayout>
+

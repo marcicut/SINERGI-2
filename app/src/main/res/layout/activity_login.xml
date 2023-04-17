@@ -17,7 +17,7 @@
         android:layout_width="600px"
         android:layout_height="139px"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:src="@mipmap/logoipp_panjang" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:paddingTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
     <TextView
         android:id="@+id/lblWelcome"
@@ -44,49 +44,43 @@
         android:textColor="@color/black"
         android:textSize="14sp" />
 
-    <TextView
-        android:id="@+id/lbluserID"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUserID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblWelcome"
-        android:gravity="left"
-        android:text="User ID / Alamat Email :"
         android:layout_marginTop="50dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:hint="User ID / Alamat E-mail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <EditText
-        android:id="@+id/txtUserID"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/txtUserID"
+            android:maxLines="1"
+            android:inputType="text"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPutih"
-        android:layout_below="@id/lbluserID"
-        android:textSize="16sp"
-        android:inputType="text"
-        android:layout_marginTop="5dp" />
+        android:layout_below="@id/layoutUserID"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-    <TextView
-        android:id="@+id/lblPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtUserID"
-        android:gravity="left"
-        android:text="Password :"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
-
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPutih"
-        android:layout_below="@id/lblPassword"
-        android:textSize="16sp"
-        android:inputType="textPassword"
-        android:layout_marginTop="5dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:id="@+id/txtPassword"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
@@ -95,10 +89,10 @@
         android:padding="10dp"
         android:textColor="#000000"
         android:background="@drawable/blue_button"
-        android:layout_below="@id/txtPassword"
-        android:layout_marginTop="30dp"
+        android:layout_below="@id/layoutPassword"
+        android:layout_marginTop="40dp"
         android:text="Login"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textAlignment="center"/>
 
     <TextView

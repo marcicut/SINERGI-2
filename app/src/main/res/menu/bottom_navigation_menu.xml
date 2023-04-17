@@ -21,8 +21,8 @@
         android:icon="@drawable/icon_account"
         android:title="@string/menu_account"/>
     <item
-        android:id="@+id/mnabout"
+        android:id="@+id/mnlogout"
         android:enabled="true"
-        android:icon="@drawable/icon_setting"
-        android:title="@string/menu_setting"/>
+        android:icon="@drawable/icon_logout"
+        android:title="@string/menu_logout"/>
 </menu>

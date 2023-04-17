@@ -5,4 +5,5 @@
     <string name="menu_account">Akun Saya</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_scan">Scan</string>
+    <string name="menu_logout">Logout</string>
 </resources>
